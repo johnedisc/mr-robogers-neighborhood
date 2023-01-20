@@ -7,7 +7,8 @@
 
 function numToKeyword(indexNumbr) {
   const one = /\b\d*1\d*/;
-  return indexNumbr.toString().replace(one, 'beep'); 
+  const two = /\b\d*2\d*/;
+  return indexNumbr.toString().replace(two, 'Boop!').replace(one, 'Beep!'); 
 }
 
 function createArr(usrNumbr) {

@@ -74,6 +74,11 @@ Expected Output: Beep!
 
 forgot to convert indexNumbr to a string!!
 
+Test: "Should return Boop! if indexNumbr is 2"
+Code:
+const num = 2;
+numToKeyword(num);
+Expected Output: Boop!
 
 
 ## license
