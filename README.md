@@ -52,17 +52,17 @@ We first need a function that takes a positive number and stores all the numbers
 
 Describe: createArr(number)
 
-Test: "It should return an array with the numbers from 0 to number."
+Test: "It should return an array with the numbers from 0 to ${number}."
 Code:
 const num = 3;
-wordCounter(num);
+createArr(num);
 Expected Output: [0,1,2,3]
 
-Test: 
+Test: "It should return null if ${number} < 0"
 Code:
-const text = "hello there";
-wordCounter(text);
-Expected Output: 
+const num = -1;
+createArr(num);
+Expected Output: null
 
 ## license
 
