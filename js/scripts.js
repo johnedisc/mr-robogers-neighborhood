@@ -54,7 +54,9 @@ window.addEventListener('load', (e) => {
     if (negativeCheck(usrNumbr) === null) {
       printResults.innerText = `${checkName(usrName.toLowerCase())}, thank you for being here. please enter a whole number greater than zero.`;
     } else {
-      printResults.innerText = negativeCheck(usrNumbr).join(', ');
+      printResults.innerText = `${checkName(usrName.toLowerCase())}, thank you for being here. here are the results.
+
+        ${negativeCheck(usrNumbr).join(', ')}`;
     };
     
 
