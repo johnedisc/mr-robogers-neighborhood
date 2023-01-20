@@ -50,7 +50,7 @@ cit
 
 We first need a function that takes a positive number and stores all the numbers from 0 up to that number in an array.  
 
-Describe: createArr(number)
+describe: createArr(usrNumbr)
 
 Test: "It should return an array with the numbers from 0 to ${number}."
 Code:
@@ -58,11 +58,23 @@ const num = 3;
 createArr(num);
 Expected Output: [0,1,2,3]
 
-Test: "It should return null if ${number} < 0"
+Test: "It should return null if ${usrNumbr} < 0"
 Code:
 const num = -1;
 createArr(num);
 Expected Output: null
+
+describe: numToKeyword(indexNumbr)
+
+Test: "Should take a number and return Beep! if number = 1"
+Code:
+const num = 1;
+numToKeyword(num);
+Expected Output: Beep!
+
+forgot to convert indexNumbr to a string!!
+
+
 
 ## license
 

@@ -5,8 +5,13 @@
 
 // business
 
-function createArr(number) {
-  if (number < 0) {
+function numToKeyword(indexNumbr) {
+  const one = /\b\d*1\d*/;
+  return indexNumbr.toString().replace(one, 'beep'); 
+}
+
+function createArr(usrNumbr) {
+  if (usrNumbr < 0) {
     return null;
   }
   const arr = [];
