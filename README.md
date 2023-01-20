@@ -33,18 +33,13 @@ git clone
 
 * vim: use 
 ```bash
-cit
-```
- to erase text insidee HTML TAGS and insert text
-* vim: use 
-```bash
-:s!^!//!
+:[range]s/char/char replace/g
+
+# for example to select lines 1-10, globally
+
+:1,10s/char/new char/g
 ``` 
- to comment out a line or all selected lines
-*.querySelector() will take any attribute name like this: 
-```javascript
-.querySelector("[attr='value']")
-```
+to select the lines for your substitute (search and replace). with no 'g' flag, this will only return the first result on a line.
 
 ## testing and layout
 
@@ -104,4 +99,4 @@ Expected Output: [0,'beep!','boop!','won\'t you be my neighbor']
 
 feel free to get in touch at [christopher(dot)johnedis(at)gmail(dot)com](christopher.johnedis@gmail.com)
 
-Copyright (c) 1.13.23 [johnedisc](https://johnedisc.github.io/portfolio/)
+Copyright (c) 1.20.23 [johnedisc](https://johnedisc.github.io/portfolio/)
