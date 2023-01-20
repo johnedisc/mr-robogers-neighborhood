@@ -29,23 +29,26 @@ function createArr(usrNumbr) {
 
 // userinterface
 
-window.addEventListener('load', e => {
-
-  e.preventDefault();
+window.addEventListener('load', (e) => {
 
   // select form and submit
-  const form = document.getElementById('formDiv');
-  form.addEventListener('submit', e => {
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', (e) => {
+
+    e.preventDefault();
 
     // read in user input
     const usrNumbr = document.getElementById('usrNumbr').value;
-     
+
     // select html elements and print result from user
-    const printResults = document.getElementById('printResults h3').value;
+    const printResults = document.querySelector('#printResults h3');
+
+    // print results
     if (negativeCheck(usrNumbr) === null) {
       printResults.innerText = 'please provide a whole number greater than zero';
     } else {
-      printResults.innerText = negativeCheck(usrNumbr);
+      printResults.innerText = negativeCheck(usrNumbr).join(', ');
     };
     
 
