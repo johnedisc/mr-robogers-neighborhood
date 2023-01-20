@@ -8,8 +8,6 @@ function negativeCheck(usrNumbr) {
   } 
 }
 
-
-
 // business
 
 function numToKeyword(indexNumbr) {
@@ -24,10 +22,35 @@ function numToKeyword(indexNumbr) {
 function createArr(usrNumbr) {
   const arr = [];
   for (let i = 0; i <= usrNumbr; i++) {
-    arr.push(i);
+    arr.push(numToKeyword(i));
   }
   return arr;
 }
 
-
 // userinterface
+
+window.addEventListener('load', e => {
+
+  e.preventDefault();
+
+  // select form and submit
+  const form = document.getElementById('formDiv');
+  form.addEventListener('submit', e => {
+
+    // read in user input
+    const usrNumbr = document.getElementById('usrNumbr').value;
+     
+    // select html elements and print result from user
+    const printResults = document.getElementById('printResults h3').value;
+    if (negativeCheck(usrNumbr) === null) {
+      printResults.innerText = 'please provide a whole number greater than zero';
+    } else {
+      printResults.innerText = negativeCheck(usrNumbr);
+    };
+    
+
+
+  });
+
+
+});
