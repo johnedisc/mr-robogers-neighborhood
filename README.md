@@ -80,6 +80,25 @@ const num = 2;
 numToKeyword(num);
 Expected Output: Boop!
 
+Test: "Should return "Won't you be my neighbor?" if indexNumbr is 3"
+Code:
+const num = 3;
+numToKeyword(num);
+Expected Output: "Won't you be my neighbor?"
+
+describe: negativeCheck() ==> createArr() ==> numToKeyword()
+
+Test: "giving positive number to negativeCheck() should return an array from createArr()"
+Code:
+const num = 1;
+negativeCheck(num);
+Expected Output: [0,1]
+
+Test: "giving positive number to negativeCheck() should return array with keywords inserted from numToKeyword()"
+Code:
+const num = 3;
+negativeCheck(num);
+Expected Output: [0,'beep!','boop!','won\'t you be my neighbor']
 
 ## license
 
