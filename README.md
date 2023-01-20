@@ -47,53 +47,61 @@ We first need a function that takes a positive number and stores all the numbers
 
 describe: createArr(usrNumbr)
 
-Test: "It should return an array with the numbers from 0 to ${number}."
-Code:
+test: "It should return an array with the numbers from 0 to ${number}."
+code:
 const num = 3;
 createArr(num);
-Expected Output: [0,1,2,3]
+expected Output: [0,1,2,3]
 
-Test: "It should return null if ${usrNumbr} < 0"
-Code:
+test: "It should return null if ${usrNumbr} < 0"
+code:
 const num = -1;
 createArr(num);
-Expected Output: null
+expected Output: null
 
 describe: numToKeyword(indexNumbr)
 
-Test: "Should take a number and return Beep! if number = 1"
-Code:
+test: "Should take a number and return Beep! if number = 1"
+code:
 const num = 1;
 numToKeyword(num);
-Expected Output: Beep!
+expected Output: Beep!
 
 forgot to convert indexNumbr to a string!!
 
-Test: "Should return Boop! if indexNumbr is 2"
-Code:
+test: "Should return Boop! if indexNumbr is 2"
+code:
 const num = 2;
 numToKeyword(num);
-Expected Output: Boop!
+expected Output: Boop!
 
-Test: "Should return "Won't you be my neighbor?" if indexNumbr is 3"
-Code:
+test: "Should return "Won't you be my neighbor?" if indexNumbr is 3"
+code:
 const num = 3;
 numToKeyword(num);
-Expected Output: "Won't you be my neighbor?"
+expected Output: "Won't you be my neighbor?"
 
 describe: negativeCheck() ==> createArr() ==> numToKeyword()
 
-Test: "giving positive number to negativeCheck() should return an array from createArr()"
-Code:
+test: "giving positive number to negativeCheck() should return an array from createArr()"
+code:
 const num = 1;
 negativeCheck(num);
-Expected Output: [0,1]
+expected Output: [0,1]
 
-Test: "giving positive number to negativeCheck() should return array with keywords inserted from numToKeyword()"
-Code:
+test: "giving positive number to negativeCheck() should return array with keywords inserted from numToKeyword()"
+code:
 const num = 3;
 negativeCheck(num);
-Expected Output: [0,'beep!','boop!','won\'t you be my neighbor']
+expected Output: [0,'beep!','boop!','won\'t you be my neighbor']
+
+describe: checkName(name)
+
+test: "should return 'hello' if user doesn't provide name"
+code:
+const name = '';
+negativeCheck(name);
+expected Output: hello
 
 ## license
 

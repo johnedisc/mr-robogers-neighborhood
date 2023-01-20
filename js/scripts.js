@@ -1,5 +1,9 @@
 // utility
 
+function checkName(name) {
+  return name === '' ? 'hello' : name; 
+}
+
 function negativeCheck(usrNumbr) {
   if (usrNumbr < 0) {
     return null;
@@ -40,13 +44,15 @@ window.addEventListener('load', (e) => {
 
     // read in user input
     const usrNumbr = document.getElementById('usrNumbr').value;
+    const usrName = document.getElementById('usrName').value;
+    const thoughts = document.getElementById('thoughts').value;
 
     // select html elements and print result from user
     const printResults = document.querySelector('#printResults h3');
 
     // print results
     if (negativeCheck(usrNumbr) === null) {
-      printResults.innerText = 'please provide a whole number greater than zero';
+      printResults.innerText = `${checkName(usrName.toLowerCase())}, thank you for being here. please enter a whole number greater than zero.`;
     } else {
       printResults.innerText = negativeCheck(usrNumbr).join(', ');
     };
