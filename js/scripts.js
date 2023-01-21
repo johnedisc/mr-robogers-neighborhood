@@ -15,12 +15,8 @@ function negativeCheck(usrNumbr) {
 // business
 
 function numToKeyword(indexNumbr) {
-  // define regexp to match numbers
-  const one = /\b\d*1\d*/;
-  const two = /\b\d*2\d*/;
-  const three = /\b\d*3\d*/;
   // create string to use replace method
-  return indexNumbr.toString().replace(three, 'won\'t you be my neighbor?').replace(two, 'boop!').replace(one, 'beep!'); 
+  return indexNumbr.toString().replace(/\b\d*3\d*/, 'won\'t you be my neighbor?').replace(/\b\d*2\d*/, 'boop!').replace(/\b\d*1\d*/, 'beep!'); 
 }
 
 function createArr(usrNumbr) {
@@ -44,24 +40,18 @@ window.addEventListener('load', (e) => {
 
     // read in user input
     const usrNumbr = document.getElementById('usrNumbr').value;
-    const usrName = document.getElementById('usrName').value;
-    const thoughts = document.getElementById('thoughts').value;
+    const usrName = document.getElementById('usrName').value.toLowerCase();
 
     // select html elements and print result from user
-    const printResults = document.querySelector('#printResults h3');
+    const printResults = document.querySelector('#printResults h4');
 
     // print results
     if (negativeCheck(usrNumbr) === null) {
-      printResults.innerText = `${checkName(usrName.toLowerCase())}, thank you for being here. please enter a whole number greater than zero.`;
+      printResults.innerText = `${checkName(usrName)}, thank you for being here. please enter a whole number greater than zero.`;
     } else {
-      printResults.innerText = `${checkName(usrName.toLowerCase())}, thank you for being here. here are the results.
+      printResults.innerText = `${checkName(usrName)}, thank you for being here. here are the results.
 
         ${negativeCheck(usrNumbr).join(', ')}`;
     };
-    
-
-
   });
-
-
 });
