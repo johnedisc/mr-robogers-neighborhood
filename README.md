@@ -13,12 +13,13 @@
 
 ## description
 
-
+* a brief exploration of compartmentalizing functions so they do as close to one job as possible.
+* the user enters a number and their name and the site will print out a pop fizz type statement on the screen.
 
 ## setup/installation requirements
 
-* visit the site [here]()
-* clone down the [repository from github]() inside the directory of your choosing
+* visit the site [here](https://johnedisc.github.io/mr-robogers-neighborhood)
+* clone down the [repository from github](https://github.com/johnedisc/mr-robogers-neighborhood) inside the directory of your choosing
 ```bash
 git clone 
 ```
@@ -27,7 +28,7 @@ git clone
 
 ## known Bugs
 
-* 
+* image background is sometimes not centered
 
 ## tech learned in making the site
 
