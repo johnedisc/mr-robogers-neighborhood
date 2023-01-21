@@ -5,7 +5,7 @@ function checkName(name) {
 }
 
 function negativeCheck(usrNumbr) {
-  if (usrNumbr < 0) {
+  if (usrNumbr < 0 || usrNumbr > 500) {
     return null;
   } else {
     return createArr(usrNumbr);
@@ -47,7 +47,7 @@ window.addEventListener('load', (e) => {
 
     // print results
     if (negativeCheck(usrNumbr) === null) {
-      printResults.innerText = `${checkName(usrName)}, thank you for being here. please enter a whole number greater than zero.`;
+      printResults.innerText = `${checkName(usrName)}, thank you for being here. please enter a whole number greater than zero and less than 500.`;
     } else {
       printResults.innerText = `${checkName(usrName)}, thank you for being here. here are the results.
 
