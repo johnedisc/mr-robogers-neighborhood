@@ -26,6 +26,12 @@ img {
   padding: 5% 0 5% 0;
 }
 
+#printResults {
+  flex: 4 1 300px;
+}
+
+#printResults h4 {
+  line-height: 2em;
 
 #footer {
   display: flex;
