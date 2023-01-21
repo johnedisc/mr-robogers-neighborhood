@@ -1,6 +1,7 @@
 body {
 	font-family: 'Libre Baskerville', serif;
 	background-color: #CFB0B2;
+  font-weight: 700;
 }
 
 img {
@@ -24,6 +25,11 @@ img {
 
 .container > * {
   padding: 5% 0 5% 0;
+}
+
+#title {
+  font-weight: 900;
+  padding: 0 0 1em 0;
 }
 
 #printResults {
